@@ -27,8 +27,23 @@ Changing the value of "num" will control the number of nodes created.
 ### (Optional) Get the current status
 `make get-status`
 
+### To Stop/Tear-down
+`make down`
+
+
 ## Commands
 Run `make help` to see all available commands
+
+| make \<command> | Description |
+| ---------------|  ---------- |
+|help                   | Show this help message. |
+|docker-pull            | Pull docker image(s) used for eventgen |
+|nodes                  | Run <num> of eventgen nodes e.g. (make nodes num=5) |
+|controller             | Create the eventgen controller (Runs on port 9500) |
+|eventgen-configure     | Configure the controller with bundles in the ./bundles directory |
+|all                    | Make controller / nodes / static httpd with <num> nodes |
+|down                   | Tear down the entire stack (controller / http / nodes) |
+
 
 # Future Enhancements
 * Allow for remote nodes
